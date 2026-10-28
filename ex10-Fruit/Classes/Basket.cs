@@ -23,5 +23,15 @@ namespace ex10_Fruit.Classes
     {
       return _fruits.Count;
     }
+
+    public void AddMultibleFruits(List<Fruit> fruits)
+    {
+      if(fruits.Count <= 0)
+      {
+        return;
+      }
+
+       _fruits.AddRange(fruits);
+    }
   }
 }

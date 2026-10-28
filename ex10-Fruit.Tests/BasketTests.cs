@@ -36,5 +36,23 @@ namespace ex10_Fruit.Tests
       //Assert
       Assert.Equal(2, basket.GetFruitCount());
     }
+
+    [Fact]
+    public void AddFruit_AsAListWithFruits()
+    {
+      // Arrange
+      Basket basket = new();
+      List<Fruit> fruits = [
+        new Fruit("Apple"),
+        new Fruit("Banana"),
+        new Fruit("Orange"),
+       ];
+
+      // Act
+      basket.AddMultibleFruits(fruits);
+
+      //Assert
+      Assert.Equal(3, basket.GetFruitCount());
+    }
   }
 }
