@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="ex10-Fruit.Tests/ex10-Fruit.Tests.csproj" />
   <Project Path="ex10-Fruit/ex10-Fruit.csproj" />
 </Solution>
