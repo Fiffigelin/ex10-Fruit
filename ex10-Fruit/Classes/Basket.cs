@@ -33,5 +33,10 @@ namespace ex10_Fruit.Classes
 
        _fruits.AddRange(fruits);
     }
+
+    public bool ContainsFruit(string name)
+    {
+      return _fruits.Any(fruit => fruit.Name == name);
+    }
   }
 }

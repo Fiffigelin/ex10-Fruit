@@ -54,5 +54,23 @@ namespace ex10_Fruit.Tests
       //Assert
       Assert.Equal(3, basket.GetFruitCount());
     }
+
+    [Theory]
+    [InlineData("Apple", true)]
+    [InlineData("Banana", false)]
+    [InlineData("Orange", false)]
+    public void ContainsFruit_ShouldReturnExpectedResult(
+    string name, bool expected)
+    {
+      // Arrange
+      Basket basket = new();
+      basket.AddFruit(new Fruit("Apple"));
+
+      // Act
+      bool result = basket.ContainsFruit(name);
+
+      // Assert
+      Assert.Equal(expected, result);
+    }
   }
 }
